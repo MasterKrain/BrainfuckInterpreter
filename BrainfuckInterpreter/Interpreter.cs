@@ -6,13 +6,12 @@ namespace BrainfuckInterpreter
 {
     class Interpreter
     {
-        private byte[] m_Code;
-
-        private string m_File;
-
         private string m_Title = "Brainfuck interpreter by Stan Q. Graafmans, 2017";
         public string Title { get { return m_Title; } }
 
+        private string m_File;
+
+        private byte[] m_Code;
         private byte[] m_Cells;
 
         private ushort m_Pointer = 0;
@@ -23,6 +22,7 @@ namespace BrainfuckInterpreter
             m_MemorySize = memorySize;
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine(m_Title);
+            Console.ForegroundColor = ConsoleColor.Gray;
         }
 
         private void Init()
